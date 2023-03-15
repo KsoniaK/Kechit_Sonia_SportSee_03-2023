@@ -11,11 +11,18 @@ If you are working with several versions of NodeJS, we recommend you install [nv
 
 ### 2.2 Launching the project
 
+A/ General
 - Fork the repository
 - Clone it on your computer.
+
+B/ Front
 - Go inside the "Back" case 
 - The `yarn` command will allow you to install the dependencies.
 - The `yarn dev` command will allow you to run the micro API.
+
+C/ Back
+- Go inside the "Front" case 
+- The `yarn start` command will allow you to run the React project.
 
 ## 3. Endpoints
 
