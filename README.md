@@ -16,11 +16,11 @@ A/ General
 - Clone it on your computer.
 
 B/ Front
-- Go inside the "Front" case 
+- Go inside the "Front" repository. 
 - The `yarn start` command will allow you to run the React project.
 
 C/ Back
-- Go inside the "Back" case 
+- Go inside the "Back" repository.
 - The `yarn` command will allow you to install the dependencies.
 - The `yarn dev` command will allow you to run the micro API.
 
