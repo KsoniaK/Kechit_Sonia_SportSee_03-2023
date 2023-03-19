@@ -4,9 +4,12 @@ This repo contains all the source code to run the micro API for the sports analy
 
 ### Technologies / Library
 
-- JS      /  - React
-- HTML5.  /  - Recharts
+- JS
+- HTML5
 - CSS3
+
+- React
+- Recharts
 
 ### 2.1 Prerequisites
 
