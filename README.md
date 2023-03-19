@@ -2,6 +2,12 @@
 
 This repo contains all the source code to run the micro API for the sports analytics dashboard SportSee.
 
+### Technologies / Library
+
+- JS      /  - React
+- HTML5.  /  - Recharts
+- CSS3
+
 ### 2.1 Prerequisites
 
 - [NodeJS (**version 12.18**)](https://nodejs.org/en/)
