@@ -33,18 +33,41 @@ function Dashboard() {
   // }
 
   // ----------------------- V3 --------------------------
-  const [user, setUser] = useState(null)
+  // const [user, setUser] = useState(null)
+  // const [activity, setActivity] = useState(null)
+  // const [sessions, setSessions] = useState(null)
+  // const [performance, setPerformance] = useState(null)
 
-  useEffect(() => {
-    axios.get(`http://localhost:3000/user/12`)
-    .then((response) => {
-      setUser(response.data)
-    })
-  }, [])
+  // const [loading, setLoading] = useState(false);
+  // const [error, setError] = useState(true);
+
+  // useEffect(() => {
+  //   (async () => {
+  //     setError(false);
+  //     try{
+  //       const result = await axios.get(`http://localhost:3000/user/12`);
+  //       const result2 = await axios.get(`http://localhost:3000/user/12/average-sessions`);
+  //       const result3 = await axios.get(`http://localhost:3000/user/12/activity`);
+  //       const result4 = await axios.get(`http://localhost:3000/user/12/performance`);
+  //       setUser(result.data);
+  //       setActivity(result2.data);
+  //       setSessions(result3.data);
+  //       setPerformance(result4.data);
+  //     }catch(err){
+  //       setLoading(false);
+  //       setError(err);
+  //       console.log('error true :' , err);
+  //     }
+  //       setLoading(false);
+  //     })();
+  // }, [])
+
+  // if(loading) return <h1>LOADING ...</h1>
+  // if(error) console.log(error);
 
   return (
     <main className='main'>
-      <Header user={user}/>
+      <Header />
       <Activity />
       <SessionsAverage />
       <Performance />

@@ -8,12 +8,13 @@ function SessionsAverage() {
   // ----------------------- V3 --------------------------
   const [sessions, setSessions] = useState(null)
 
-      useEffect(() => {
-        axios.get(`http://localhost:3000/user/12/average-sessions`)
-        .then((response) => {
-          setSessions(response.data)
-        })
-      }, [])
+  useEffect(() => {
+    (async () => {
+      const response = await axios.get(`http://localhost:3000/user/12/average-sessions`)
+      // console.log(response);
+      setSessions(response.data)
+    })();
+  }, []);
     
   return (
     <div >

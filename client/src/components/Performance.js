@@ -3,18 +3,19 @@ import axios from 'axios';
 import { RadarChart, PolarGrid, PolarAngleAxis, PolarRadiusAxis, Radar, Legend } from "recharts";
 import "../styles/performance.css"
 
-function Performance() {
+function Performance(props) {
   // ----------------------- V1 --------------------------
   // const performance = props.performance
   // ----------------------- V3 --------------------------
   const [performance, setPerformance] = useState(null)
 
-    useEffect(() => {
-      axios.get(`http://localhost:3000/user/12/performance`)
-      .then((response) => {
-        setPerformance(response.data)
-      })
-    }, [])
+  useEffect(() => {
+    (async () => {
+      const response = await axios.get(`http://localhost:3000/user/12/performance`)
+      // console.log(response);
+      setPerformance(response.data)
+    })();
+  }, []);
   
   return (
     <div >

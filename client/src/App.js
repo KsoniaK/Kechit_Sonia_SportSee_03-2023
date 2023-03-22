@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
-import axios from "axios";
+// import axios from "axios";
 import { Routes, Route, Navigate } from "react-router-dom";
-import useFetch from "./service/service";
+// import useFetch from "./service/service";
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Dashboard from "./pages/Dashboard";
