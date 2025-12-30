@@ -1,18 +1,16 @@
-import { BrowserRouter as Router } from 'react-router-dom';
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+import reportWebVitals from './reportWebVitals'; // Outil de mesure de performances (temps de chargement) = pas necessaire ici
 
+// sélectionne la <div id="root"></div> dans public/index.html et crée un root React "moderne"
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+  // il englobe toute l’application. grâce à lui : les routes dynamiques /user/:id , useParams() dans Dashboard et a navigation sans rechargement
   <Router>
-      <App />
+    <App />
   </Router>
 );
-
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();

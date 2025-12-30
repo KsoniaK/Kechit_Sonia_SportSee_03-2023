@@ -1,3 +1,4 @@
+// Importe les données mockées depuis data.js
 const {
     USER_MAIN_DATA,
     USER_ACTIVITY,
@@ -5,38 +6,28 @@ const {
     USER_PERFORMANCE
 } = require('./data')
 
-/**
- * @description Retrieve the main user info (first name, last name, today score)
- * @param {number} id 
- */
+
 const getUserById = id => USER_MAIN_DATA
-    .filter(user => user.id === id)
+    .filter(user => user.id === id) // récupère tous les utilisateurs dont l’ID correspond
+    // prend le premier élément du tableau filtré (ou undefined si aucun utilisateur n’est trouvé). On écupère un UNIQUE utilisateur à partir d’un tableau.
     .shift()
 
 
-/**
- * @param {number} id 
- */
 const getUserActivityById = id => USER_ACTIVITY
     .filter(userActivity => userActivity.userId === id)
     .shift()
 
 
-/**
- * @param {number} id 
- */
 const getUserAverageSession = id => USER_AVERAGE_SESSIONS
     .filter(userActivity => userActivity.userId === id)
     .shift()
 
 
-/**
- * @param {number} id 
- */
 const getUserPerformance = id => USER_PERFORMANCE
     .filter(userPerformance => userPerformance.userId === id)
     .shift()
 
+// Rend toutes ces fonctions disponibles dans d’autres fichiers pour pouvoir les utiliser comme un mini service de récupération de données.
 module.exports = {
     getUserById,
     getUserActivityById,

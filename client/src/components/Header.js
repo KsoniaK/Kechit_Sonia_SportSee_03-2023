@@ -1,25 +1,14 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
+import React from "react";
 import "../styles/header.css";
 
-function Header(){
-  const [user, setUser] = useState(null)
-
-  useEffect(() => {
-    (async () => {
-      const response = await axios.get(`http://localhost:3000/user/12`)
-      // console.log(response);
-      setUser(response.data)
-    })();
-  }, []);
-
-  const firstName = user?.data.userInfos.firstName
-
-  return(
+const Header = ({ user }) => {
+  // Si données par encore chargées (nul, undefined)
+  if (!user || !user.userInfos) return <header>Chargement...</header>;
+  return (
     <header>
-      <h1>Bonjour {firstName}</h1>
+      <h1>Bonjour <span className="user-name">{user.userInfos.firstName}</span></h1>
       <p>Félicitation ! Vous avez explosé vos objectifs hier 👏</p>
     </header>
-  )
-}
+  );
+};
 export default Header;
